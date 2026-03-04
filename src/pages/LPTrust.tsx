@@ -1,24 +1,26 @@
 import NavBar from "@/components/NavBar";
-import HeroSection from "@/components/HeroSection";
+import HeroTrust from "@/components/HeroTrust";
 import SocialProofStrip from "@/components/SocialProofStrip";
+import InsuranceComparison from "@/components/InsuranceComparison";
 import HowItWorks from "@/components/HowItWorks";
 import CoverageHighlights from "@/components/CoverageHighlights";
 import PricingSection from "@/components/PricingSection";
 import UrgencyCTA from "@/components/UrgencyCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import InsuranceComparison from "@/components/InsuranceComparison";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 
-const Index = () => {
+// Variant: Peace of mind / best-in-class messaging
+// Target: Higher net worth homeowners who value time, trust, and quality
+const LPTrust = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavBar />
-      <HeroSection />
+      <HeroTrust />
       <SocialProofStrip />
-      <HowItWorks />
       <InsuranceComparison />
+      <HowItWorks />
       <CoverageHighlights />
       <PricingSection />
       <UrgencyCTA />
@@ -26,10 +28,9 @@ const Index = () => {
       <FAQSection />
       <Footer />
       <StickyMobileCTA />
-      {/* Bottom padding on mobile for sticky CTA */}
       <div className="h-16 md:hidden" />
     </div>
   );
 };
 
-export default Index;
+export default LPTrust;

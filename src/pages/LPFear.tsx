@@ -1,24 +1,26 @@
 import NavBar from "@/components/NavBar";
-import HeroSection from "@/components/HeroSection";
+import HeroFear from "@/components/HeroFear";
 import SocialProofStrip from "@/components/SocialProofStrip";
+import InsuranceComparison from "@/components/InsuranceComparison";
 import HowItWorks from "@/components/HowItWorks";
 import CoverageHighlights from "@/components/CoverageHighlights";
 import PricingSection from "@/components/PricingSection";
 import UrgencyCTA from "@/components/UrgencyCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
-import InsuranceComparison from "@/components/InsuranceComparison";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 
-const Index = () => {
+// Variant: Fear-based / risk-focused messaging
+// Target: Fear-susceptible customers, segmented by lower home price / higher risk profile
+const LPFear = () => {
   return (
     <div className="min-h-screen bg-background">
       <NavBar />
-      <HeroSection />
+      <HeroFear />
       <SocialProofStrip />
-      <HowItWorks />
       <InsuranceComparison />
+      <HowItWorks />
       <CoverageHighlights />
       <PricingSection />
       <UrgencyCTA />
@@ -26,10 +28,9 @@ const Index = () => {
       <FAQSection />
       <Footer />
       <StickyMobileCTA />
-      {/* Bottom padding on mobile for sticky CTA */}
       <div className="h-16 md:hidden" />
     </div>
   );
 };
 
-export default Index;
+export default LPFear;

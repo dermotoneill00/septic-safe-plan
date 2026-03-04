@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import Enroll from "./pages/Enroll";
 import EnrollDenied from "./pages/EnrollDenied";
 import EnrollSuccess from "./pages/EnrollSuccess";
+import LPTrust from "./pages/LPTrust";
+import LPFear from "./pages/LPFear";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
           <Route path="/enroll" element={<Enroll />} />
           <Route path="/enroll/denied" element={<EnrollDenied />} />
           <Route path="/enroll/success" element={<EnrollSuccess />} />
+          <Route path="/lp/trust" element={<LPTrust />} />
+          <Route path="/lp/fear" element={<LPFear />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
