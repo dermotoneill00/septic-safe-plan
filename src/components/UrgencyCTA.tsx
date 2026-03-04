@@ -1,10 +1,9 @@
 import { AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const UrgencyCTA = () => {
-  const scrollToForm = () => {
-    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const navigate = useNavigate();
 
   return (
     <section className="py-16 bg-primary">
@@ -23,7 +22,7 @@ const UrgencyCTA = () => {
           variant="cta"
           size="lg"
           className="h-14 px-10 text-lg rounded-lg"
-          onClick={scrollToForm}
+          onClick={() => navigate("/enroll")}
         >
           Get Protected Now
         </Button>

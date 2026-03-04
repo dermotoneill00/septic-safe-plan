@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const PricingSection = () => {
-  const scrollToForm = () => {
-    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const navigate = useNavigate();
 
   return (
     <section className="py-20 lg:py-28 bg-section-alt">
@@ -23,7 +22,7 @@ const PricingSection = () => {
           variant="cta"
           size="lg"
           className="h-14 px-10 text-lg rounded-lg"
-          onClick={scrollToForm}
+          onClick={() => navigate("/enroll")}
         >
           See Plans &amp; Get Your Quote
         </Button>

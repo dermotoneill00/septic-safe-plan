@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-home.jpg";
 
 const trustBadges = [
@@ -9,9 +10,7 @@ const trustBadges = [
 ];
 
 const HeroSection = () => {
-  const scrollToForm = () => {
-    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const navigate = useNavigate();
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -44,7 +43,7 @@ const HeroSection = () => {
               variant="cta"
               size="lg"
               className="h-14 px-10 text-lg rounded-lg"
-              onClick={scrollToForm}
+              onClick={() => navigate("/enroll")}
             >
               Get My Free Quote
             </Button>
