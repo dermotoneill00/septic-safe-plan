@@ -1,0 +1,35 @@
+import { Button } from "@/components/ui/button";
+
+const PricingSection = () => {
+  const scrollToForm = () => {
+    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section className="py-20 lg:py-28 bg-section-alt">
+      <div className="container mx-auto px-4 text-center">
+        <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-4">
+          Comprehensive Protection
+        </p>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 max-w-2xl mx-auto">
+          Up to $25,000 in Septic System Coverage
+        </h2>
+        <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+          Plans designed to fit your budget. No inspections required, no long
+          forms, and coverage starts quickly for most services. Fully underwritten
+          by a nationally recognized carrier.
+        </p>
+        <Button
+          variant="cta"
+          size="lg"
+          className="h-14 px-10 text-lg rounded-lg"
+          onClick={scrollToForm}
+        >
+          See Plans &amp; Get Your Quote
+        </Button>
+      </div>
+    </section>
+  );
+};
+
+export default PricingSection;

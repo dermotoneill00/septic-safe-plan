@@ -1,9 +1,12 @@
+import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import SocialProofStrip from "@/components/SocialProofStrip";
 import HowItWorks from "@/components/HowItWorks";
 import CoverageHighlights from "@/components/CoverageHighlights";
-import UrgencyCTA from "@/components/UrgenyCTA";
+import PricingSection from "@/components/PricingSection";
+import UrgencyCTA from "@/components/UrgencyCTA";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import InsuranceComparison from "@/components/InsuranceComparison";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
@@ -11,12 +14,15 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <NavBar />
       <HeroSection />
       <SocialProofStrip />
       <HowItWorks />
       <CoverageHighlights />
+      <PricingSection />
       <UrgencyCTA />
       <LeadCaptureForm />
+      <InsuranceComparison />
       <FAQSection />
       <Footer />
       <StickyMobileCTA />

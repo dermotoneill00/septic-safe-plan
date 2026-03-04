@@ -1,15 +1,14 @@
 import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const covered = [
-  "Septic pump failures",
-  "Tank cracks & structural issues",
-  "Drain field problems",
-  "Emergency pump-outs",
-  "Labor & service calls",
-  "Parts & replacement components",
-  "Electrical & float switch failures",
-  "Baffle & outlet tee repairs",
+  "Tank & Distribution Box Repair/Replacement",
+  "Leach Field Repair & Replacement",
+  "Associated Labor Costs",
+  "Emergency Main Line / Wastewater Pipe Pump",
+  "New Parts, Pipes & Components",
+  "Transferable to New Homeowner",
 ];
 
 const notCovered = [
@@ -17,9 +16,11 @@ const notCovered = [
   "Cosmetic landscaping restoration",
   "Code violation upgrades",
   "Intentional misuse or neglect",
+  "Cesspools & non-standard systems",
 ];
 
 const CoverageHighlights = () => {
+  const ref = useScrollReveal<HTMLDivElement>();
   const scrollToForm = () => {
     document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -27,7 +28,7 @@ const CoverageHighlights = () => {
   return (
     <section className="py-20 lg:py-28 bg-section-alt">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div ref={ref} className="text-center mb-16">
           <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-2">
             Comprehensive Protection
           </p>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,15 +9,27 @@ const LeadCaptureForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    address: "",
+    streetAddress: "",
+    zipCode: "",
     phone: "",
     email: "",
   });
 
+  // Populate hidden UTM fields from URL parameters on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach((param) => {
+      const el = document.getElementById(param) as HTMLInputElement | null;
+      if (el && params.get(param)) el.value = params.get(param)!;
+    });
+    const pageUrlEl = document.getElementById("page_url") as HTMLInputElement | null;
+    if (pageUrlEl) pageUrlEl.value = window.location.href;
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thank you! We'll be in touch shortly with your free quote.");
-    setFormData({ firstName: "", lastName: "", address: "", phone: "", email: "" });
+    setFormData({ firstName: "", lastName: "", streetAddress: "", zipCode: "", phone: "", email: "" });
   };
 
   const handleChange = (field: string, value: string) => {
@@ -44,6 +56,14 @@ const LeadCaptureForm = () => {
             onSubmit={handleSubmit}
             className="bg-card rounded-2xl p-8 md:p-10 border border-border shadow-lg"
           >
+            {/* Hidden UTM & tracking fields */}
+            <input type="hidden" name="utm_source" id="utm_source" />
+            <input type="hidden" name="utm_medium" id="utm_medium" />
+            <input type="hidden" name="utm_campaign" id="utm_campaign" />
+            <input type="hidden" name="utm_content" id="utm_content" />
+            <input type="hidden" name="lead_type" value="Campaign" />
+            <input type="hidden" name="page_url" id="page_url" />
+
             <div className="grid md:grid-cols-2 gap-5">
               <div>
                 <Label htmlFor="firstName" className="text-foreground font-medium">First Name</Label>
@@ -70,12 +90,24 @@ const LeadCaptureForm = () => {
             </div>
 
             <div className="mt-5">
-              <Label htmlFor="address" className="text-foreground font-medium">Address or ZIP Code</Label>
+              <Label htmlFor="streetAddress" className="text-foreground font-medium">Street Address</Label>
               <Input
-                id="address"
-                placeholder="123 Main St or 06001"
-                value={formData.address}
-                onChange={(e) => handleChange("address", e.target.value)}
+                id="streetAddress"
+                placeholder="123 Main St"
+                value={formData.streetAddress}
+                onChange={(e) => handleChange("streetAddress", e.target.value)}
+                required
+                className="mt-1.5 h-12"
+              />
+            </div>
+
+            <div className="mt-5">
+              <Label htmlFor="zipCode" className="text-foreground font-medium">ZIP Code</Label>
+              <Input
+                id="zipCode"
+                placeholder="06001"
+                value={formData.zipCode}
+                onChange={(e) => handleChange("zipCode", e.target.value)}
                 required
                 className="mt-1.5 h-12"
               />

@@ -23,6 +23,7 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-bold text-primary-foreground mb-4 text-base">Contact</h4>
+            {/* TODO: Replace with campaign-specific trackable phone number before launch */}
             <div className="flex items-center gap-2 text-primary-foreground/80 mb-2">
               <Phone className="h-4 w-4" />
               <span>(888) 555-GUARD</span>
@@ -34,6 +35,7 @@ const Footer = () => {
           </div>
 
           {/* Service Area */}
+          {/* Confirm state list: prototype has 9 states, ProGuard covers 12. Verify with coverage team before launch. */}
           <div>
             <h4 className="font-bold text-primary-foreground mb-4 text-base">Service Area</h4>
             <div className="flex flex-wrap gap-2">

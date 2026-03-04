@@ -8,11 +8,11 @@ import {
 const faqs = [
   {
     question: "How much does a ProGuard plan cost?",
-    answer: "Plans start at an affordable monthly rate that's a fraction of what a single repair would cost. The exact price depends on your coverage level and property details. Fill out the quote form above to get your personalized pricing — it takes less than 60 seconds.",
+    answer: "Plans start at an affordable annual rate — a fraction of what a single repair would cost. Fill out the quote form above to get your personalized pricing in under 60 seconds.",
   },
   {
     question: "What exactly is covered under the plan?",
-    answer: "ProGuard covers the major components of your septic system including pump failures, tank structural issues, drain field problems, emergency pump-outs, and all associated labor and parts. We cover real-world breakdowns — not cosmetic issues or pre-existing damage you already know about.",
+    answer: "ProGuard covers tank & distribution box repair/replacement, leach field repair & replacement, associated labor costs, emergency main line/wastewater pipe pump, new parts/pipes/components, and the plan is transferable to a new homeowner. We cover real-world breakdowns — not cosmetic issues, cesspools, or pre-existing damage you already know about.",
   },
   {
     question: "How do I file a claim if something goes wrong?",

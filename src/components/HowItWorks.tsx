@@ -1,4 +1,5 @@
 import { FileText, Shield, Phone } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const steps = [
   {
@@ -16,16 +17,18 @@ const steps = [
   {
     icon: Phone,
     number: "03",
-    title: "Call Us Anytime — We Handle the Rest",
+    title: "You're Protected",
     description: "When something goes wrong, one call is all it takes. We dispatch a local pro and cover the bill.",
   },
 ];
 
 const HowItWorks = () => {
+  const ref = useScrollReveal<HTMLDivElement>();
+
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div ref={ref} className="text-center mb-16">
           <p className="text-secondary font-semibold uppercase tracking-wider text-sm mb-2">
             Simple & Straightforward
           </p>

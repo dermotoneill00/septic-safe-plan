@@ -36,10 +36,14 @@ const SocialProofStrip = () => {
             Trusted by Homeowners
           </p>
           <p className="text-3xl md:text-4xl font-display font-bold text-primary-foreground">
-            Protecting 10,000+ homeowners across the Northeast
+            25+ Years Protecting Homeowners Across the Northeast
+          </p>
+          <p className="text-primary-foreground/70 mt-3 text-base">
+            91% of our customers renew their plans year after year.
           </p>
         </div>
 
+        {/* TODO: Replace with verified testimonials from proguardplans.com/testimonials/ */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((t) => (
             <div

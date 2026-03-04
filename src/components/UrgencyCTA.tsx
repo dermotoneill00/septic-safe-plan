@@ -13,11 +13,11 @@ const UrgencyCTA = () => {
           <AlertTriangle className="h-6 w-6 text-accent" />
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4 max-w-2xl mx-auto">
-          The average septic repair costs $3,000–$7,000. Don't wait until something breaks.
+          Septic failures can cost $5,000 to $25,000+ to repair. Don't wait until something breaks.
         </h2>
         <p className="text-primary-foreground/75 mb-8 max-w-lg mx-auto">
           Most homeowners don't think about their septic system until it fails.
-          ProGuard gives you peace of mind for pennies a day.
+          ProGuard's coverage means one breakdown doesn't become a financial disaster.
         </p>
         <Button
           variant="cta"

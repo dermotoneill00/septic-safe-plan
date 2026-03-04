@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
-import logoWhite from "@/assets/logo-white.png";
 
 const trustBadges = [
   "No Inspection Required",
@@ -28,27 +27,33 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 lg:py-28">
-        <div className="max-w-2xl">
-          <img src={logoWhite} alt="ProGuard" className="h-8 md:h-10 mb-6" />
-
+        <div className="max-w-2xl animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-            One Unexpected Repair Shouldn't Cost You{" "}
-            <span className="italic text-accent">Thousands</span>
+            One Septic Failure Can Cost You $25,000.{" "}
+            <span className="italic text-accent">Are You Protected?</span>
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/85 mb-8 leading-relaxed max-w-xl">
-            ProGuard's Septic Protection Plan covers parts, labor, and pump-outs
-            — so you never get blindsided.
+            ProGuard covers septic system repairs, replacement, and emergency
+            service — backed by 25+ years of trusted protection and underwritten
+            by a nationally recognized carrier.
           </p>
 
-          <Button
-            variant="cta"
-            size="lg"
-            className="h-14 px-10 text-lg rounded-lg"
-            onClick={scrollToForm}
-          >
-            Get My Free Quote
-          </Button>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <Button
+              variant="cta"
+              size="lg"
+              className="h-14 px-10 text-lg rounded-lg"
+              onClick={scrollToForm}
+            >
+              Get My Free Quote
+            </Button>
+            <p className="text-primary-foreground/70 text-sm">
+              Up to{" "}
+              <span className="text-accent font-semibold text-base">$25,000</span>
+              {" "}in coverage · Cancel anytime
+            </p>
+          </div>
 
           {/* Trust Badges */}
           <div className="mt-10 flex flex-wrap gap-4">
